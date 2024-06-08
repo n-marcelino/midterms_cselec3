@@ -1,0 +1,25 @@
+.nav {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navList {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  cursor: pointer;
+  color: #fff;
+  padding: 1em;
+}
+
+.navItem.active {
+  background-color: #fd7e27;
+  font-weight: bold;
+  /* Different color for the active page link */
+}

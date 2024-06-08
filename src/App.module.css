@@ -1,0 +1,24 @@
+.container {
+  background-color: #00a1e6;
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow:auto;
+}
+
+.title {
+  color: #fff;
+  margin: 0;
+  padding: 0 0 20px 0;
+  /* Adding padding for spacing */
+  font-size: 2rem;
+}
+
+.content {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  flex-grow: 1;
+}
