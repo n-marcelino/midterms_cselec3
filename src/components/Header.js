@@ -1,27 +1,34 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styles from './Header.module.css';
 
-function Header({ setPage, currentPage }) {
+function Header() {
     return (
         <nav className={styles.nav}>
             <ul className={styles.navList}>
-                <li
-                    className={`${styles.navItem} ${currentPage === 'home' ? styles.active : ''}`}
-                    onClick={() => setPage('home')}
-                >
-                    Home
+                <li className={styles.navItem}>
+                    <NavLink
+                        to="/home"
+                        className={({ isActive }) => isActive ? styles.active : ''}
+                    >
+                        Home
+                    </NavLink>
                 </li>
-                <li
-                    className={`${styles.navItem} ${currentPage === 'about' ? styles.active : ''}`}
-                    onClick={() => setPage('about')}
-                >
-                    About Us
+                <li className={styles.navItem}>
+                    <NavLink
+                        to="/about"
+                        className={({ isActive }) => isActive ? styles.active : ''}
+                    >
+                        About Us
+                    </NavLink>
                 </li>
-                <li
-                    className={`${styles.navItem} ${currentPage === 'contact' ? styles.active : ''}`}
-                    onClick={() => setPage('contact')}
-                >
-                    Contact Us
+                <li className={styles.navItem}>
+                    <NavLink
+                        to="/contact"
+                        className={({ isActive }) => isActive ? styles.active : ''}
+                    >
+                        Contact Us
+                    </NavLink>
                 </li>
             </ul>
         </nav>

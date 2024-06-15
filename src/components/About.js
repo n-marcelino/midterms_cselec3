@@ -1,14 +1,11 @@
 import React from 'react';
 import styles from './Content.module.css';
 
-function Content({title, text}) {
+export default function About({title, body}) {
   return (
     <div className={styles.container}>
       <h2>{title}</h2>
-      <p>{text}</p>
-      <p>{text}</p>
+      <p>{body}</p>
     </div>
   );
 }
-
-export default Content;

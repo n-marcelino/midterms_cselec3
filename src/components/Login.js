@@ -1,15 +1,29 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './Content.module.css';
 
-function Login({ onLogin }) {
+function Login({ setLoggedIn }) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+
+    const validUsers = [
+        { username: 'nico', password: 'marcelino' },
+        { username: 'jimin', password: 'bangtan' },
+        { username: 'john', password: 'doe' }
+    ];
 
     const handleSubmit = (event) => {
-        console.log(username);
-        console.log(password)
         event.preventDefault();
-        onLogin(username, password);
+        const isValidUser = validUsers.some(
+            (user) => user.username === username && user.password === password
+        );
+        if (isValidUser) {
+            setLoggedIn(true);
+            navigate('/home');
+        } else {
+            alert('Incorrect username or password');
+        }
     };
 
     return (
