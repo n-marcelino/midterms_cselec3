@@ -29,7 +29,7 @@ This project implements a simple login, props, and components functionality of r
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/midterms_cselec3
+    git clone https://github.com/n-marcelino/midterms_cselec3
     ```
 
 2. Run ```npm start```
